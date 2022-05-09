@@ -42,6 +42,23 @@ const S = { Button: styled.button`` };
 <br />
 <br />
 
+<div style="display:flex; justify-content:center; align-items:center;">
+
+<img align="left" src="/public/handshake.png" alt="handshake-emoji" style="margin-right:30px;"/>
+
+### Give the project a [⭐ STAR ⭐](https://github.com/brendanmorrell/eslint-plugin-styled-components-a11y) and help increase accessibility for everyone!
+
+<img align="right" src="/public/handshake.png" alt="handshake-emoji" style="margin-left:30px;"/>
+
+</div>
+<br />
+<br />
+<br />
+<!-- should figure out how to actually style this section. this is a temp fix -->
+<br />
+<br />
+<br />
+
 ## Installation
 
 Install as a dev dependency:
