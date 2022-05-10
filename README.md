@@ -1,8 +1,11 @@
-## Eslint Plugin Styled Components A11y 🤝
+## Eslint Plugin Kahoot Styled Components A11y 🤝
+
+This plugin is a Kahoot's fork of the https://github.com/brendanmorrell/eslint-plugin-styled-components-a11y plugin.
+It adds a support for an object based method of defining styled components.
 
 This plugin adds the ability to lint styled components according to the rules outlined in eslint-plugin-jsx-a11y.
 
-It handles all 4 methods styled components uses to create components. All of these would show the error
+It handles 5 methods styled components uses to create components. All of these would show the error
 
 ```diff
 -Visible, non-interactive elements with click handlers must have at least one keyboard listener.`
@@ -27,6 +30,11 @@ const StyledDiv = styled(Div)``;
 ```jsx
 const ButtonAsDiv = styled.button``;
 <ButtonAsDiv as="div" onClick={() => null} />;
+```
+
+```jsx
+const S = { Button: styled.button`` };
+<S.Button onClick={() => null} />;
 ```
 
 ![linting examples](/public/linting-styled-components.png)
@@ -55,11 +63,11 @@ const ButtonAsDiv = styled.button``;
 
 Install as a dev dependency:
 
-    yarn add -D eslint-plugin-styled-components-a11y
+    yarn add -D eslint-plugin-kahoot-styled-components-a11y
 
 or
 
-    npm i --save-dev eslint-plugin-styled-components-a11y
+    npm i --save-dev eslint-plugin-kahoot-styled-components-a11y
 
 ### Configuration
 
@@ -67,15 +75,15 @@ Add styled-components-a11y to the plugins section of your .eslintrc configuratio
 
 ```json
 {
-  "plugins": ["styled-components-a11y"]
+  "plugins": ["kahoot-styled-components-a11y"]
 }
 ```
 
-Enable the recommeded ruleset or the strict ruleset. Add `plugin:styled-components-a11y/recommended` or `plugin:styled-components-a11y/strict` in extends:
+Enable the recommeded ruleset or the strict ruleset. Add `plugin:kahoot-styled-components-a11y/recommended` or `plugin:kahoot-styled-components-a11y/strict` in extends:
 
 ```json
 {
-  "extends": ["plugin:styled-components-a11y/recommended"]
+  "extends": ["plugin:kahoot-styled-components-a11y/recommended"]
 }
 ```
 
@@ -84,7 +92,7 @@ Alternatively, you can configure individual rules under the rules section.
 ```json
 {
   "rules": {
-    "styled-components-a11y/rule-name": 2
+    "kahoot-styled-components-a11y/rule-name": 2
   }
 }
 ```
